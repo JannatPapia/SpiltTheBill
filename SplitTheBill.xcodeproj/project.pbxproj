@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2125D127D89F16005E99BA /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2125D027D89F16005E99BA /* TagView.swift */; };
+		5C2125D327D89FE4005E99BA /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2125D227D89FE4005E99BA /* Tag.swift */; };
 		5CF5366727D6173800904A5A /* SplitTheBillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5366627D6173800904A5A /* SplitTheBillApp.swift */; };
 		5CF5366927D6173800904A5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5366827D6173800904A5A /* ContentView.swift */; };
 		5CF5366B27D6173A00904A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF5366A27D6173A00904A5A /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C2125D027D89F16005E99BA /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		5C2125D227D89FE4005E99BA /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		5CF5366327D6173800904A5A /* SplitTheBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTheBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF5366627D6173800904A5A /* SplitTheBillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheBillApp.swift; sourceTree = "<group>"; };
 		5CF5366827D6173800904A5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		5CF5367627D67B0C00904A5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5C2125D227D89FE4005E99BA /* Tag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				5CF5367827D67B5400904A5A /* Home.swift */,
+				5C2125D027D89F16005E99BA /* TagView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,7 +172,9 @@
 			files = (
 				5CF5366927D6173800904A5A /* ContentView.swift in Sources */,
 				5CF5367927D67B5400904A5A /* Home.swift in Sources */,
+				5C2125D327D89FE4005E99BA /* Tag.swift in Sources */,
 				5CF5366727D6173800904A5A /* SplitTheBillApp.swift in Sources */,
+				5C2125D127D89F16005E99BA /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
