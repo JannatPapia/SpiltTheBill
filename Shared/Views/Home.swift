@@ -24,6 +24,8 @@ struct Home: View {
             TagView(maxLimit: 150, tags: $tags)
             //Default Height...
                 .frame(height: 280)
+                .padding(.top, 20)
+            
             //TextField
             TextField("apple", text: $text)
                 .font(.title3)
@@ -35,10 +37,14 @@ struct Home: View {
                 )
             //Setting only Textfield as Dark..
             .environment(\.colorScheme, .dark)
-            .padding(.vertical, 12)
+            .padding(.vertical, 18)
             
             // Add Button
             Button {
+                
+                //adding Tag...
+                tags.append(Tag(text: text))
+                text = ""
                 
             } label: {
                 Text("Add Tag")
@@ -49,6 +55,9 @@ struct Home: View {
                     .background(Color.white)
                     .cornerRadius(10)
             }
+            //Disabling Button...
+            .disabled(text == "")
+            .opacity(text == "" ? 0.6 : 1)
         }
         .padding(15)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
