@@ -11,6 +11,9 @@ struct Home: View {
     
     @State var text: String = ""
     
+    // Tags..
+    @State var tags: [Tag] = []
+    
     var body: some View {
         VStack {
             Text("Filter \nMenus")
@@ -18,7 +21,9 @@ struct Home: View {
                 .foregroundColor(Color.white)
                 .frame(maxWidth: .infinity,  alignment: .leading)
             // Custom Tag view...
-            
+            TagView(maxLimit: 150, tags: $tags)
+            //Default Height...
+                .frame(height: 280)
             //TextField
             TextField("apple", text: $text)
                 .font(.title3)
