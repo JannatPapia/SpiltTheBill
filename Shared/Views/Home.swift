@@ -13,6 +13,7 @@ struct Home: View {
     
     // Tags..
     @State var tags: [Tag] = []
+    @State var showAlert: Bool = false
     
     var body: some View {
         VStack {
@@ -41,10 +42,19 @@ struct Home: View {
             
             // Add Button
             Button {
-                
-                //adding Tag...
-                tags.append(Tag(text: text))
-                text = ""
+                addTag(tags: tags, text: text, fontSize: 16, maxLimit: 150) {
+                    alert, tag in
+                    
+                    if alert {
+                        // Showing alert
+                        showAlert.toggle()
+                    }
+                    else {
+                        //adding Tag...
+                        tags.append(tag)
+                        text = ""
+                    }
+                }
                 
             } label: {
                 Text("Add Tag")
@@ -64,7 +74,9 @@ struct Home: View {
         .background(Color.blue.opacity(0.9)
                         .ignoresSafeArea()
         )
-        
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Error"), message: Text("Tag limit Exceeded try to delete some tags !!!"), dismissButton: .destructive(Text("Ok")))
+        }
         
     }
 }
